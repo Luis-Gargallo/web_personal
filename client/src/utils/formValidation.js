@@ -3,7 +3,7 @@ export function minLengthValidation(inputData, minLength) {
 
     removeClassErrorSuccess(inputData);
 
-    if(value.length >= minLength){
+    if (value.length >= minLength) {
         inputData.classList.add("success");
         return true;
     } else {
@@ -13,13 +13,13 @@ export function minLengthValidation(inputData, minLength) {
 }
 
 export function emailValidation(inputData) {
-    const emailValid = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    const emailValid = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     const { value } = inputData;
 
     removeClassErrorSuccess(inputData);
 
     const resultValidation = emailValid.test(value);
-    if(resultValidation) {
+    if (resultValidation) {
         inputData.classList.add("success");
         return true;
     } else {
